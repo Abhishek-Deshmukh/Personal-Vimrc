@@ -33,7 +33,9 @@ Plug 'pydata/pandas'
 Plug 'itchyny/vim-cursorword'
 Plug 'xevz/vim-sshauthkeys'
 Plug 'prettier/vim-prettier'
-Plug 'plasticboy/vim-markdown'
+Plug 'gabrielelana/vim-markdown'
+Plug 'lesguillemets/threejsify.vim.dev'
+Plug 'pangloss/vim-javascript'
 call plug#end()
 
 set bg=dark
