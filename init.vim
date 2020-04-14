@@ -23,7 +23,7 @@ Plug 'xuhdev/vim-latex-live-preview'
 Plug 'vim-scripts/fortran.vim'
 Plug 'rudrab/vimf90'
 Plug 'ap/vim-css-color'
-Plug 'nathanaelkane/vim-indent-guides'
+Plug 'yggdroot/indentline'
 Plug 'raimondi/delimitmate'
 Plug 'chemzqm/vim-jsx-improve'
 " Plug 'altercation/vim-colors-solarized'
@@ -36,6 +36,7 @@ Plug 'prettier/vim-prettier'
 Plug 'gabrielelana/vim-markdown'
 Plug 'lesguillemets/threejsify.vim.dev'
 Plug 'pangloss/vim-javascript'
+Plug 'mattn/emmet-vim'
 call plug#end()
 
 set bg=dark
@@ -72,9 +73,11 @@ map <leader>f :Goyo<CR>
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
-
-" the indent guides
-let g:indent_guides_enable_on_vim_startup = 0
+" the indent guides:
+set ts=2 sw=2 et
+let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size = 1
 
 " Splits open at the bottom and right, which is non-retarded, unlike vim defaults.
 set splitbelow splitright
