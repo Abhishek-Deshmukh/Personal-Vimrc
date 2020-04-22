@@ -37,6 +37,7 @@ Plug 'gabrielelana/vim-markdown'
 Plug 'lesguillemets/threejsify.vim.dev'
 Plug 'pangloss/vim-javascript'
 Plug 'mattn/emmet-vim'
+Plug 'burnettk/vim-angular'
 call plug#end()
 
 set bg=dark
