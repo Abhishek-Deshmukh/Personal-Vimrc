@@ -35,9 +35,10 @@ Plug 'xevz/vim-sshauthkeys'
 Plug 'prettier/vim-prettier'
 Plug 'gabrielelana/vim-markdown'
 Plug 'lesguillemets/threejsify.vim.dev'
-Plug 'pangloss/vim-javascript'
+" Plug 'pangloss/vim-javascript'
+Plug 'w0rp/ale'
 Plug 'mattn/emmet-vim'
-Plug 'burnettk/vim-angular'
+Plug 'posva/vim-vue'
 call plug#end()
 
 set bg=dark
