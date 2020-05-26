@@ -7,38 +7,27 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'tpope/vim-surround'
-Plug 'scrooloose/nerdtree'
-Plug 'junegunn/goyo.vim'
-Plug 'PotatoesMaster/i3-vim-syntax'
-Plug 'bling/vim-airline'
-Plug 'tpope/vim-commentary'
-Plug 'vifm/vifm.vim'
-Plug 'sophacles/vim-processing'
-Plug 'vim-scripts/django.vim'
-Plug 'kamykn/spelunker.vim'
-Plug 'valloric/youcompleteme'
-Plug 'saada/reactjs-snippets'
-Plug 'xuhdev/vim-latex-live-preview'
-Plug 'vim-scripts/fortran.vim'
-Plug 'rudrab/vimf90'
-Plug 'ap/vim-css-color'
-Plug 'yggdroot/indentline'
-Plug 'raimondi/delimitmate'
-Plug 'chemzqm/vim-jsx-improve'
-" Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim', { 'as': 'dracula' }
-Plug 'leafgarland/typescript-vim'
-Plug 'pydata/pandas'
-Plug 'itchyny/vim-cursorword'
-Plug 'xevz/vim-sshauthkeys'
-Plug 'prettier/vim-prettier'
-Plug 'gabrielelana/vim-markdown'
-Plug 'lesguillemets/threejsify.vim.dev'
-" Plug 'pangloss/vim-javascript'
-Plug 'w0rp/ale'
-Plug 'mattn/emmet-vim'
-Plug 'posva/vim-vue'
+Plug 'vim-airline/vim-airline' " the cool line you see down there
+Plug 'tpope/vim-surround' " changin the brackets and stuff quickly
+Plug 'scrooloose/nerdtree' " navigating to files from inside vim
+Plug 'tpope/vim-commentary' " to comment quickly
+Plug 'kamykn/spelunker.vim' " spell check
+Plug 'valloric/youcompleteme' " auto completion
+Plug 'yggdroot/indentline' " beautiful dotted indent line
+Plug 'raimondi/delimitmate' " bracket and quite completion
+Plug 'dracula/vim', { 'as': 'dracula' }  " coz colors are imporant
+Plug 'itchyny/vim-cursorword' " to hilight all the words with same name
+Plug 'w0rp/ale' " the annoying static error checker
+Plug 'prettier/vim-prettier' , { 'do': 'npm install' } " for formatting html, js and stuff
+Plug 'gabrielelana/vim-markdown' " markdown(md)
+Plug 'ap/vim-css-color' " too see the css color in editor
+Plug 'rstacruz/sparkup' " fast html
+Plug 'leafgarland/typescript-vim' " typescript
+Plug 'posva/vim-vue' " vue
+Plug 'vim-scripts/django.vim' " django html hilight
+Plug 'PotatoesMaster/i3-vim-syntax' " syntax hilighting for i3
+Plug 'rust-lang/rust.vim' " rust
+Plug 'junegunn/goyo.vim' " for reading stuff,
 call plug#end()
 
 set bg=dark
@@ -118,7 +107,7 @@ map <leader>r :vsp<space>$REFER<CR>
 " Replace all is aliased to S.
 nnoremap S :%s//g<Left><Left>
 
-" Compile document, be it groff/LaTeX/markdown/etc.
+" Compile document, be it groff/LaTeX/markdown/python/go etc.
 map <leader>c :w! \| !compiler <c-r>%<CR>
 
 " Open corresponding .pdf/.html or preview
