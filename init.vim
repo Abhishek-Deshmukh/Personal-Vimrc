@@ -19,10 +19,14 @@ Plug 'dracula/vim', { 'as': 'dracula' }  " coz colors are imporant
 Plug 'itchyny/vim-cursorword' " to hilight all the words with same name
 Plug 'w0rp/ale' " the annoying static error checker
 Plug 'prettier/vim-prettier' , { 'do': 'npm install' } " for formatting html, js and stuff
+Plug 'ambv/black' " python formatting
 Plug 'gabrielelana/vim-markdown' " markdown(md)
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " markdown preview
 Plug 'ap/vim-css-color' " too see the css color in editor
 Plug 'rstacruz/sparkup' " fast html
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'branch': 'release/0.x' } " javascript prettier
 Plug 'leafgarland/typescript-vim' " typescript
+Plug 'kchmck/vim-coffee-script' " coffee script
 Plug 'posva/vim-vue' " vue
 Plug 'vim-scripts/django.vim' " django html hilight
 Plug 'PotatoesMaster/i3-vim-syntax' " syntax hilighting for i3
@@ -77,8 +81,12 @@ set splitbelow splitright
 let g:vimwiki_list = [{'path': '~/vimwiki/',
       \ 'syntax': 'markdown', 'ext': '.md'}]
 
-" latex live preview
-let g:livepreview_previewer = 'zathura'
+" Markdown preview
+let g:mkdp_auto_start = 1
+let g:mkdp_auto_close = 1
+let g:mkdp_browser = 'firefox-developer-edition'
+let g:mkdp_refresh_slow = 0
+let g:mkdp_page_title = 'Preview - ${name}'
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
