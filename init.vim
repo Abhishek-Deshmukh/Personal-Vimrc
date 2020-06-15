@@ -7,31 +7,84 @@ if ! filereadable(expand('~/.config/nvim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.config/nvim/plugged')
-Plug 'vim-airline/vim-airline' " the cool line you see down there
-Plug 'tpope/vim-surround' " changin the brackets and stuff quickly
-Plug 'scrooloose/nerdtree' " navigating to files from inside vim
-Plug 'tpope/vim-commentary' " to comment quickly
-Plug 'kamykn/spelunker.vim' " spell check
-Plug 'valloric/youcompleteme' " auto completion
-Plug 'yggdroot/indentline' " beautiful dotted indent line
-Plug 'raimondi/delimitmate' " bracket and quite completion
-Plug 'dracula/vim', { 'as': 'dracula' }  " coz colors are imporant
-Plug 'itchyny/vim-cursorword' " to hilight all the words with same name
-Plug 'w0rp/ale' " the annoying static error checker
-Plug 'prettier/vim-prettier' , { 'do': 'npm install' } " for formatting html, js and stuff
-Plug 'ambv/black' " python formatting
-Plug 'gabrielelana/vim-markdown' " markdown(md)
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  } " markdown preview
-Plug 'ap/vim-css-color' " too see the css color in editor
-Plug 'rstacruz/sparkup' " fast html
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'branch': 'release/0.x' } " javascript prettier
-Plug 'leafgarland/typescript-vim' " typescript
-Plug 'kchmck/vim-coffee-script' " coffee script
-Plug 'posva/vim-vue' " vue
-Plug 'vim-scripts/django.vim' " django html hilight
-Plug 'PotatoesMaster/i3-vim-syntax' " syntax hilighting for i3
-Plug 'rust-lang/rust.vim' " rust
-Plug 'junegunn/goyo.vim' " for reading stuff,
+" the cool line you see down there
+Plug 'vim-airline/vim-airline'
+
+" changin the brackets and stuff quickly
+Plug 'tpope/vim-surround'
+
+" navigating to files from inside vim
+Plug 'scrooloose/nerdtree'
+
+" to comment quickly
+Plug 'tpope/vim-commentary'
+
+" spell check
+Plug 'kamykn/spelunker.vim'
+
+" auto completion
+Plug 'valloric/youcompleteme'
+
+" beautiful dotted indent line
+Plug 'yggdroot/indentline'
+
+" bracket and quite completion
+Plug 'raimondi/delimitmate'
+
+" coz colors are imporant
+Plug 'dracula/vim', { 'as': 'dracula' }
+
+" to hilight all the words with same name
+Plug 'itchyny/vim-cursorword'
+
+" the annoying static error checker
+Plug 'w0rp/ale'
+
+" for formatting html, js and stuff
+Plug 'prettier/vim-prettier' , { 'do': 'npm install' }
+
+" python formatting
+Plug 'ambv/black'
+
+" markdown(md)
+Plug 'gabrielelana/vim-markdown'
+
+" markdown preview
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app & yarn install'  }
+
+" too see the css color in editor
+Plug 'ap/vim-css-color'
+
+" fast html
+Plug 'rstacruz/sparkup'
+
+" javascript prettier
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'branch': 'release/0.x' }
+
+" javascript syntax highting
+Plug 'pangloss/vim-javascript'
+
+" typescript
+Plug 'leafgarland/typescript-vim'
+
+" coffee script
+Plug 'kchmck/vim-coffee-script'
+
+" vue
+Plug 'posva/vim-vue'
+
+" django html hilight
+Plug 'vim-scripts/django.vim'
+
+" syntax hilighting for i3
+Plug 'PotatoesMaster/i3-vim-syntax'
+
+" rust
+Plug 'rust-lang/rust.vim'
+
+" for reading stuff,
+Plug 'junegunn/goyo.vim'
+
 call plug#end()
 
 set bg=dark
