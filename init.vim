@@ -43,9 +43,6 @@ Plug 'w0rp/ale'
 " for formatting html, js and stuff
 Plug 'prettier/vim-prettier' , { 'do': 'npm install' }
 
-" python formatting
-Plug 'ambv/black'
-
 " markdown(md)
 Plug 'gabrielelana/vim-markdown'
 
