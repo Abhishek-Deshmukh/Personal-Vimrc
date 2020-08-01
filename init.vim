@@ -34,11 +34,14 @@ Plug 'raimondi/delimitmate'
 " coz colors are imporant
 Plug 'dracula/vim', { 'as': 'dracula' }
 
-" to hilight all the words with same name
+" to highlight all the words with same name
 Plug 'itchyny/vim-cursorword'
 
 " the annoying static error checker
 Plug 'w0rp/ale'
+
+" good old python
+Plug 'psf/black'
 
 " for formatting html, js and stuff
 Plug 'prettier/vim-prettier' , { 'do': 'npm install' }
@@ -58,17 +61,20 @@ Plug 'rstacruz/sparkup'
 " javascript prettier
 Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'branch': 'release/0.x' }
 
-" javascript syntax highting
+" javascript syntax highlight
 Plug 'pangloss/vim-javascript'
 
-" typescript
+" typescript syntax highlt
 Plug 'leafgarland/typescript-vim'
 
-" coffee script
+" coffee script syntax highlt
 Plug 'kchmck/vim-coffee-script'
 
+" pug syntax hilight
+Plug 'digitaltoad/vim-jade'
+
 " vue
-Plug 'posva/vim-vue'
+Plug 'leafOfTree/vim-vue-plugin'
 
 " django html hilight
 Plug 'vim-scripts/django.vim'
@@ -78,6 +84,9 @@ Plug 'PotatoesMaster/i3-vim-syntax'
 
 " rust
 Plug 'rust-lang/rust.vim'
+
+" root
+Plug 'vim-scripts/cern_root.vim'
 
 " for reading stuff,
 Plug 'junegunn/goyo.vim'
@@ -109,9 +118,6 @@ autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 " Setting :W to write also
 command! W write
 
-" for python
-let g:pymode_python = 'python3'
-
 " Goyo plugin makes text more readable when writing prose:
 map <leader>f :Goyo<CR>
 
@@ -137,6 +143,13 @@ let g:mkdp_auto_close = 1
 let g:mkdp_browser = 'firefox-developer-edition'
 let g:mkdp_refresh_slow = 0
 let g:mkdp_page_title = 'Preview - ${name}'
+
+" Vue
+" let g:vue_pre_processors = 'detect_on_enter'
+let g:vim_vue_plugin_use_typescript = 1
+let g:vim_vue_plugin_use_sass = 1
+let g:vim_vue_plugin_has_init_indent = 1
+let g:vim_vue_plugin_load_full_syntax = 1
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
