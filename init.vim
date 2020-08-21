@@ -101,6 +101,7 @@ set clipboard=unnamedplus
 
 " Some basics:
 nnoremap c "_c
+nnoremap ; :
 set nocompatible
 filetype plugin on
 syntax on
@@ -150,6 +151,9 @@ let g:vim_vue_plugin_use_typescript = 1
 let g:vim_vue_plugin_use_sass = 1
 let g:vim_vue_plugin_has_init_indent = 1
 let g:vim_vue_plugin_load_full_syntax = 1
+
+" Black settings
+let g:black_linelength = 79
 
 " Nerd tree
 map <leader>n :NERDTreeToggle<CR>
