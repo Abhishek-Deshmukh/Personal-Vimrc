@@ -37,6 +37,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 " to highlight all the words with same name
 Plug 'itchyny/vim-cursorword'
 
+" git blame
+Plug 'tveskag/nvim-blame-line'
+
 " the annoying static error checker
 Plug 'w0rp/ale'
 
@@ -122,6 +125,10 @@ command! W write
 " Goyo plugin makes text more readable when writing prose:
 map <leader>f :Goyo<CR>
 
+" git blame
+nnoremap <silent> <leader>b :ToggleBlameLine<CR>
+autocmd BufEnter * EnableBlameLine
+
 " Spell-check set to <leader>o, 'o' for 'orthography':
 map <leader>o :setlocal spell! spelllang=en_us<CR>
 
@@ -159,13 +166,6 @@ let g:black_linelength = 79
 map <leader>n :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
-" vimling:
-nm <leader>d :call ToggleDeadKeys()<CR>
-imap <leader>d <esc>:call ToggleDeadKeys()<CR>a
-nm <leader>i :call ToggleIPA()<CR>
-imap <leader>i <esc>:call ToggleIPA()<CR>a
-nm <leader>q :call ToggleProse()<CR>
-
 " Shortcutting split navigation, saving a keypress:
 map <C-h> <C-w>h
 map <C-j> <C-w>j
@@ -187,7 +187,7 @@ map <leader>c :w! \| !compiler <c-r>%<CR>
 
 " Open corresponding .pdf/.html or preview
 map <leader>p :!opout <c-r>%<CR><CR>
-map <leader>P :LLPStartPreview <c-r>%<CR><CR>
+map <leader>P :Prettier <c-r>%<CR><CR>
 
 " Runs a script that cleans out tex build files whenever I close out of a .tex file.
 autocmd VimLeave *.tex !texclear %
